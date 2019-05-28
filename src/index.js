@@ -8,14 +8,14 @@ const port = process.env.port || 3000
 
 app.use(express.json());
  
-app.post('/users', (req, res) => {
+app.post('/users', async (req, res) => {
     const user = new User(req.body);
-
-    user.save().then((result)=>{
+    try{
+        await user.save();
         res.status(201).send(user);
-    }).catch((e)=>{
-        res.status(400).send();
-    });
+    }catch(e){
+        res.status(500).send();
+    }
 });
 
 app.get('/users',(req, res)=>{
