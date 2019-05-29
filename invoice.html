@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Invoice</title>
+    <style>
+        .container{
+            width: 800px;
+            height: 100%;
+            margin: auto;
+            padding: 10px 30px;
+            border: 1px solid black;
+        }
+        .header-title{
+            display: inline-block;
+            width: 100%;
+        }
+        .header-text-align{
+            text-align: left;
+            float: left;
+            width: 50%;
+        }
+
+        .header-business-name{
+            float: right;
+            
+        }
+
+        .clearfix{
+            overflow: auto
+        }
+
+        .data-table{
+            width: 100%;
+            border-collapse: collapse;
+
+        }
+        .table-header{
+            text-align: left;
+            height:50px;
+            /* background-color: gray; */
+            /* border: 1px solid black; */
+        }
+        .table-row{
+            text-align: left;
+            height: 50px;
+        }
+        .table-header th{
+            border: 1px solid black;
+            padding: 5px;
+            /* border-collapse: collapse; */
+        }
+
+        .table-row td{
+            border: 1px solid black;
+            padding: 5px;
+            /* border-collapse: collapse; */
+        }
+        .text-right{
+            text-align: right;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-title">
+            <div class="header-text-align">
+                <p>Amy</p>
+                <p>Phone : +959 43011736</p>
+                <p>77th str , 36th & 37th streets</p>
+                <p>ampyaephyonaing@gmail.com</p>
+            </div>
+            <div class="header-business-name">
+                <h1>ABC Company</h1>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <table class="data-table">
+                <tr class="table-header">
+                    <th>Description</th>
+                    <th>QTY</th>
+                    <th class="text-right">Price</th>
+                    <th class="text-right">Amount</th>
+                </tr>
+                <tr class="table-row">
+                    <td>Macbook Pro (2018)</td>
+                    <td>1</td>
+                    <td class="text-right">3,550,000</td>
+                    <td class="text-right">3,550,000</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
