@@ -11,19 +11,21 @@
             height: 100%;
             margin: auto;
             padding: 10px 30px;
-            border: 1px solid black;
+            /* border: 1px solid black; */
         }
         .header-title{
             display: inline-block;
             width: 100%;
         }
-        .header-text-align{
-            text-align: left;
-            float: left;
+        .header-text-align{            
+            display: inline-block;
             width: 50%;
         }
 
         .header-business-name{
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: 35px;
             float: right;
             
         }
@@ -37,33 +39,55 @@
             border-collapse: collapse;
 
         }
-        .table-header{
-            text-align: left;
-            height:50px;
-            /* background-color: gray; */
-            /* border: 1px solid black; */
-        }
-        .table-row{
-            text-align: left;
+       
+        
+        th,td{
             height: 50px;
-        }
-        .table-header th{
             border: 1px solid black;
             padding: 5px;
-            /* border-collapse: collapse; */
+            text-align: left;
         }
 
-        .table-row td{
-            border: 1px solid black;
-            padding: 5px;
-            /* border-collapse: collapse; */
-        }
+        
         .text-right{
             text-align: right;
         }
 
+        .text-center{
+            text-align: center;
+        }
+
+        .merge-column{
+            border: 0px;
+        }
+
+        .cs-info{            
+            width: 100%;
+        }
+        .bill-to-block{          
+            display: inline-block;
+            width: 50%;
+        }
+        .invoice-block{
+            display: inline-block;
+            vertical-align: top;
+            float: right;
+        }
+        .bill-to{
+            display: inline-block;
+            vertical-align: top;
+        }
+        .client-info{
+            
+            display: inline-block;
+        }
+
+        .bill-to p{
+            font-weight: 800;
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="header-title">
@@ -77,23 +101,45 @@
                 <h1>ABC Company</h1>
             </div>
         </div>
-        <hr>
-        <div>
-            <table class="data-table">
-                <tr class="table-header">
-                    <th>Description</th>
-                    <th>QTY</th>
-                    <th class="text-right">Price</th>
-                    <th class="text-right">Amount</th>
-                </tr>
-                <tr class="table-row">
-                    <td>Macbook Pro (2018)</td>
-                    <td>1</td>
-                    <td class="text-right">3,550,000</td>
-                    <td class="text-right">3,550,000</td>
-                </tr>
-            </table>
+        <hr>               
+
+        <div class="cs-info">
+            <div class="bill-to-block">
+                <div class="bill-to">
+                    <p>Bill To</p>
+                </div>
+                <div class="client-info">
+                    <p>Amy</p>
+                    <p>Phone : +959 43011736</p>
+                    <p>77th str , 36th & 37th streets</p>
+                    <p>ampyaephyonaing@gmail.com</p>
+                </div>
+            </div>
+            <div class="invoice-block">                
+                <p>Invoice No : 000001</p>
+                <p>Date       : 31-May-2019</p>                
+            </div>
         </div>
+        
+        <table class="data-table">
+            <tr>
+                <th>Description</th>
+                <th class="text-center">QTY</th>
+                <th class="text-right">Price</th>
+                <th class="text-right">Amount</th>
+            </tr>
+            <tr>
+                <td>Macbook Pro (2018)</td>
+                <td class="text-center">1</td>
+                <td class="text-right">3,550,000</td>
+                <td class="text-right">3,550,000</td>
+            </tr>
+            <tr>
+                <td class="merge-column" colspan="2"></td>
+                <td class="text-right">3,550,000</td>                
+                <td class="text-right">3,550,000</td>                         
+            </tr>
+        </table>        
     </div>
 </body>
 </html>
