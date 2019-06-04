@@ -67,6 +67,20 @@ app.patch('/users/:id',async  (req, res)=>{
     }
 });
 
+app.delete('/users/:id',async (req,res) =>{
+    const _id = req.params.id;
+
+    try{
+        const user = await User.findByIdAndDelete(_id);
+        if(!user){
+            return res.status(404).send();
+        }
+        return res.send(user);
+    }catch(e){
+        res.status(500).send();
+    }
+});
+
 app.post('/tasks',async (req, res)=>{
     const task = new Task(req.body);
     
@@ -99,8 +113,44 @@ app.get('/tasks/:id',async (req,res)=>{
         }
         return res.status(404).send();
     }catch(e){
-        res.send(500).send();
+        res.status(500).send();
     }
+});
+
+app.patch('/tasks/:id',async (req,res)=>{
+    const _id = req.params.id;
+
+    const updates = Object.keys(req.body);
+    const allowUpdates = ['description', 'completed'];
+    const isValidOperation = updates.every((update) => allowUpdates.includes(update));
+
+    if(!isValidOperation){
+        return res.status(400).send({ error: 'Invalid updates!'});
+    }
+
+    try{
+        const task = await Task.findByIdAndUpdate(_id,req.body,{new:true,runValidators:true});
+        if(task){
+            return res.send(task);
+        }
+
+        res.status(404).send('Task not found');
+    }catch(e){
+        res.status(500).send();
+    }
+});
+
+app.delete('/tasks/:id',async(req,res)=>{
+    const _id = req.params.id;
+
+    try{
+        const task = await Task.findByIdAndDelete(_id);
+
+        if(!task){
+            return res.status(404).send();
+        }
+        res.send(task);
+    }catch{}
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
