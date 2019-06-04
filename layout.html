@@ -7,9 +7,189 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <title>Document</title>
+
+    <style>
+            .container{
+                width: 800px;
+                height: 100%;
+                margin: auto;
+                padding: 10px 30px;
+                /* border: 1px solid black; */
+            }
+            .header-title{
+                display: inline-block;
+                width: 100%;
+            }
+            .header-text-align{            
+                display: inline-block;
+                width: 50%;
+            }
+    
+            .header-business-name{
+                display: inline-block;
+                vertical-align: middle;
+                margin-top: 35px;
+                float: right;
+                
+            }
+    
+            .clearfix{
+                overflow: auto
+            }
+    
+            .data-table{
+                width: 100%;
+                border-collapse: collapse;
+    
+            }
+           
+            
+            th,td{
+                height: 50px;
+                border: 1px solid black;
+                padding: 5px;
+                text-align: left;
+            }
+    
+            
+            .text-right{
+                text-align: right;
+            }
+    
+            .text-center{
+                text-align: center;
+            }
+    
+            .merge-column{
+                border: 0px;
+            }
+    
+            .cs-info{            
+                width: 100%;
+            }
+            .bill-to-block{          
+                display: inline-block;
+                width: 50%;
+            }
+            .invoice-block{
+                display: inline-block;
+                vertical-align: top;
+                float: right;
+            }
+            .bill-to{
+                display: inline-block;
+                vertical-align: top;
+            }
+            .client-info{
+                
+                display: inline-block;
+            }
+    
+            .bill-to p{
+                font-weight: 800;
+            }
+
+            header{
+                background-color: black;
+            }
+
+            section{
+                margin:15px;
+            }
+
+            fixed-bottom{
+                position: fixed;
+                height: 100%;
+                width: 100%;
+                bottom: 0;
+            }
+            footer p{
+                color: white;
+                text-align: center;
+                background: black;
+                margin: 0 auto;
+            }
+
+            header ul li a{
+                color: white;
+            }
+        </style>
 </head>
 <body>
     
+    <header>
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+    </header>
+    <section>
+            <div class="container">
+                    <div class="header-title">
+                        <div class="header-text-align">
+                            <p>Amy</p>
+                            <p>Phone : +959 43011736</p>
+                            <p>77th str , 36th & 37th streets</p>
+                            <p>ampyaephyonaing@gmail.com</p>
+                        </div>
+                        <div class="header-business-name">
+                            <h1>ABC Company</h1>
+                        </div>
+                    </div>
+                    <hr>               
+            
+                    <div class="cs-info">
+                        <div class="bill-to-block">
+                            <div class="bill-to">
+                                <p>Bill To</p>
+                            </div>
+                            <div class="client-info">
+                                <p>Amy</p>
+                                <p>Phone : +959 43011736</p>
+                                <p>77th str , 36th & 37th streets</p>
+                                <p>ampyaephyonaing@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="invoice-block">                
+                            <p>Invoice No : 000001</p>
+                            <p>Date       : 31-May-2019</p>                
+                        </div>
+                    </div>
+                    
+                    <table class="data-table">
+                        <tr>
+                            <th>Description</th>
+                            <th class="text-center">QTY</th>
+                            <th class="text-right">Price</th>
+                            <th class="text-right">Amount</th>
+                        </tr>
+                        <tr>
+                            <td>Macbook Pro (2018)</td>
+                            <td class="text-center">1</td>
+                            <td class="text-right">3,550,000</td>
+                            <td class="text-right">3,550,000</td>
+                        </tr>
+                        <tr>
+                            <td class="merge-column" colspan="2"></td>
+                            <td class="text-right">3,550,000</td>                
+                            <td class="text-right">3,550,000</td>                         
+                        </tr>
+                    </table>        
+                </div>
+    </section>
+    <footer class="fixed-bottom">
+        <p>Copyright © 2019</p>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
