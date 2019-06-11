@@ -46,6 +46,13 @@ const userSchema = new mongoose.Schema({
     }]
 });
 
+userSchema.virtual('tasks', {
+    ref: 'Task', // The model to use
+    localField: '_id', // Find people where `localField`
+    foreignField: 'owner', // is equal to `foreignField`
+  
+  });
+
 userSchema.methods.toJSON = function(){
     const user = this;
     const userObject = user.toObject();
