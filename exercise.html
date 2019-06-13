@@ -32,7 +32,8 @@
         .jumbotron .container{
           text-align: center;
           color: white;
-          /* padding: 300px; */
+
+          margin-top: 300px;
         }
         .btn-white{
           background-color: #ffffff;
@@ -53,6 +54,11 @@
         .card image{
           border-radius: 0px;
         }
+        @media (max-width: 575.98px)  { 
+            .text-respon{
+                font-size: 20px;
+            }
+         }
     </style>
 </head>
 <body>
@@ -77,7 +83,7 @@
       </nav>
       <div class="jumbotron">
         <div class="container">
-          <h1 class="display-3">Welcome</h1>
+          <h1 class="display-3 text-respon">Welcome</h1>
           <p class="lead">
               How can i help you?
           </p>
@@ -128,9 +134,6 @@
                   </div>
                 </div>
             </div>
-           
-             
-          
         </div>
       </div>
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
