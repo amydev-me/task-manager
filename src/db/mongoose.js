@@ -1,10 +1,8 @@
 const mongoose = require('mongoose');
 const validator = require('validator');
-//Set Database Name
-const databaseName = 'task-manager-api';
 
 // Connection URL
-const url = 'mongodb://localhost:27017/'+ databaseName;
+const url = process.env.DB_HOST;
 
 
 // Connet to the Database
